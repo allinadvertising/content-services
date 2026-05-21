@@ -109,7 +109,7 @@
     z-index: 20;
   }
   .presentation-progress span {
-    display: block; height: 100%; width: 9.09%;
+    display: block; height: 100%; width: 8.33%;
     background: linear-gradient(90deg, var(--brand-gold), var(--brand-blue));
     transition: width 0.25s ease;
   }
@@ -138,6 +138,7 @@
 
   /* ── Metrics Row ── */
   .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 26px 0; }
+  .metrics-row.three { grid-template-columns: repeat(3, 1fr); }
   .metric-card {
     background: var(--white); border-radius: var(--radius);
     padding: 22px 18px; text-align: center;
@@ -268,7 +269,7 @@
     html { scroll-snap-type: y proximity; }
     .slide { width: calc(100vw - 24px); height: auto; aspect-ratio: auto; padding: 36px 24px; margin: 12px auto; min-height: calc(100vh - 24px); }
     .slide.cover { padding: 56px 28px; }
-    .two-col, .two-col-wide, .metrics-row, .pricing-row, .ai-grid, .decision-grid { grid-template-columns: 1fr; }
+    .two-col, .two-col-wide, .metrics-row, .metrics-row.three, .pricing-row, .ai-grid, .decision-grid { grid-template-columns: 1fr; }
     .timeline { flex-direction: column; gap: 16px; }
     .timeline-step::after { display: none; }
     h1 { font-size: 34px; } h2 { font-size: 28px; }
@@ -298,7 +299,7 @@
 
 <div class="presentation-progress" aria-hidden="true"><span id="presentationProgress"></span></div>
 <div class="presentation-status" aria-live="polite">
-  <span id="presentationStatus">Slide 1 of 11</span>
+  <span id="presentationStatus">Slide 1 of 12</span>
   <span class="kbd">Scroll, ↑/↓, PgUp/PgDn</span>
 </div>
 
@@ -313,7 +314,7 @@
   <div class="title">SEO Content Services</div>
   <div class="subtitle">Proposal for C-Level Decision · May 2026</div>
   <div class="pill">Prepared by Snell · All In Advertising · Confidential</div>
-  <div class="slide-num">1 / 11</div>
+  <div class="slide-num">1 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -333,7 +334,7 @@
   <div class="highlight-box">
     <p style="margin:0;"><strong>Recommendation:</strong> Launch Wave 1 with 2-3 clients, validate the model, then scale by hiring dedicated content specialists. No new hires required until Phase 2.</p>
   </div>
-  <div class="slide-num">2 / 11</div>
+  <div class="slide-num">2 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -368,7 +369,7 @@
       </ul>
     </div>
   </div>
-  <div class="slide-num">3 / 11</div>
+  <div class="slide-num">3 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -402,7 +403,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-num">4 / 11</div>
+  <div class="slide-num">4 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -431,7 +432,7 @@
   <div class="highlight-box gold" style="margin-top:24px;">
     <p style="margin:0;"><strong>Rule of thumb:</strong> Content services begin 60-90 days after technical SEO engagement starts, once the site is technically sound and indexing properly.</p>
   </div>
-  <div class="slide-num">5 / 11</div>
+  <div class="slide-num">5 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -471,7 +472,7 @@
     </div>
   </div>
   <p style="font-size:12px;color:var(--gray-500);margin-top:12px;">Estimates assume AI-assisted workflows. Without AI augmentation, add approximately 30% to all figures.</p>
-  <div class="slide-num">6 / 11</div>
+  <div class="slide-num">6 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -514,7 +515,7 @@
     </div>
   </div>
   <p style="font-size:13px;color:var(--gray-500);margin-top:12px;"><strong>One-time investment:</strong> 10-15 hours to build prompt libraries, workflow templates, and API integrations.</p>
-  <div class="slide-num">7 / 11</div>
+  <div class="slide-num">7 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -560,7 +561,7 @@
   <div class="highlight-box" style="margin-top:20px;">
     <p style="margin:0;"><strong>Wave 1 Revenue Projection:</strong> 3 clients at $2,000-$3,000/month = <strong>$6,000-$9,000/month</strong> new recurring revenue. Annual run rate: <strong>$72,000-$108,000</strong>.</p>
   </div>
-  <div class="slide-num">8 / 11</div>
+  <div class="slide-num">8 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -590,11 +591,50 @@
       <p><strong>Hire 2nd Specialist or Mid-Level Strategist.</strong> Snell shifts to high-level strategy and business development. Target: <strong>10-12 clients</strong>. Content services becomes a standalone revenue line.</p>
     </div>
   </div>
-  <div class="slide-num">9 / 11</div>
+  <div class="slide-num">9 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
-<!-- SLIDE 10: DECISION + NEXT STEPS -->
+<!-- SLIDE 10: CLIENT SUCCESS -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide">
+  <h2>What Client Success Looks Like</h2>
+  <p style="color:var(--gray-600);margin-bottom:22px;">
+    Success should be visible before revenue attribution is mature. The first signal is movement across the client's highest-priority keywords; the long-term proof is revenue growth tied back to new and improved content.
+  </p>
+  <div class="metrics-row three">
+    <div class="metric-card"><div class="value">5,000</div><div class="label">Ahrefs Keyword Tracking Capacity</div></div>
+    <div class="metric-card"><div class="value">Top</div><div class="label">Priority Keyword Focus</div></div>
+    <div class="metric-card"><div class="value">6mo+</div><div class="label">Revenue Impact Window</div></div>
+  </div>
+  <div class="two-col">
+    <div class="info-card blue">
+      <h4 style="margin-top:0;">Position Tracking as Early Proof</h4>
+      <ul style="margin-top:8px;">
+        <li>Build a position tracking project for each client around top-priority keywords.</li>
+        <li>Segment keywords by service, location, intent, and content cluster.</li>
+        <li>Use Ahrefs tracking capacity to monitor up to 5,000 total keywords across active clients.</li>
+        <li>Report movement into top 20, top 10, and top 3 positions as leading indicators.</li>
+      </ul>
+    </div>
+    <div class="info-card gold">
+      <h4 style="margin-top:0;">Revenue Attribution as Long-Term Proof</h4>
+      <ul style="margin-top:8px;">
+        <li>Track organic entrances, assisted conversions, leads, and booked revenue by content URL.</li>
+        <li>Compare new content and refreshed pages against pre-launch baselines.</li>
+        <li>After 6+ months, begin showing revenue increases connected to content creation.</li>
+        <li>Use revenue lift to justify retainer expansion and ongoing content investment.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top:20px;">
+    <p style="margin:0;"><strong>Client-facing narrative:</strong> first we prove visibility is improving, then we prove that visibility is turning into qualified traffic, leads, and revenue.</p>
+  </div>
+  <div class="slide-num">10 / 12</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 11: DECISION + NEXT STEPS -->
 <!-- ═══════════════════════════════════════════ -->
 <div class="slide">
   <h2>Go / No-Go: Decision Framework</h2>
@@ -632,11 +672,11 @@
     <p>SEO Content Services Proposal · Q2 2026 · Prepared by Snell for All In Advertising Leadership · Confidential</p>
     <p>Questions? Reach out to Snell directly.</p>
   </div>
-  <div class="slide-num">10 / 11</div>
+  <div class="slide-num">11 / 12</div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
-<!-- SLIDE 11: END -->
+<!-- SLIDE 12: END -->
 <!-- ═══════════════════════════════════════════ -->
 <div class="slide cover end">
   <div class="logo-wrap">
@@ -646,7 +686,7 @@
   <div class="title">Questions?</div>
   <div class="subtitle">SEO Content Services Proposal · All In Advertising · May 2026</div>
   <div class="pill">Thank you</div>
-  <div class="slide-num">11 / 11</div>
+  <div class="slide-num">12 / 12</div>
 </div>
 
 <script>
