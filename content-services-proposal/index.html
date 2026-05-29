@@ -162,22 +162,28 @@
   .info-card.green { border-left: 4px solid var(--green); }
 
   /* ── Phase Timeline ── */
-  .timeline { display: flex; gap: 0; margin: 24px 0; }
-  .timeline-step { flex: 1; text-align: center; position: relative; padding: 0 8px; }
+  .timeline { display: flex; gap: 0; margin: 24px 0; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: calc(100% / 6);
+    right: calc(100% / 6);
+    height: 2px;
+    background: var(--gray-200);
+    z-index: 0;
+  }
+  .timeline-step { flex: 1; text-align: center; position: relative; padding: 0 8px; z-index: 1; }
   .timeline-step .dot {
     width: 16px; height: 16px; border-radius: 50%;
     background: var(--brand-blue); margin: 0 auto 12px;
-    position: relative; z-index: 1;
+    position: relative; z-index: 2;
   }
   .timeline-step .dot.alt { background: var(--brand-gold); }
   .timeline-step .dot.future { background: var(--gray-300); }
   .timeline-step .label { font-weight: 700; font-size: 16px; color: var(--gray-800); margin-bottom: 4px; }
   .timeline-step .desc { font-size: 14px; color: var(--gray-500); line-height: 1.4; }
-  .timeline-step::after {
-    content: ''; position: absolute; top: 7px; left: 50%; width: 6.67%; height: 2px;
-    background: var(--gray-200); z-index: 0;
-  }
-  .timeline-step:last-child::after { display: none; }
+  .timeline-step::after { display: none; }
 
   /* ── Table styling ── */
   table { width: 6.67%; border-collapse: collapse; margin: 18px 0; font-size: 16px; }
@@ -358,6 +364,7 @@
     .slide.cover { padding: 56px 28px; }
     .two-col, .two-col-wide, .metrics-row, .metrics-row.three, .pricing-row, .ai-grid, .decision-grid, .decision-steps { grid-template-columns: 1fr; }
     .timeline { flex-direction: column; gap: 16px; }
+    .timeline::before { display: none; }
     .timeline-step::after { display: none; }
     h1 { font-size: 34px; } h2 { font-size: 28px; }
     .slide.cover .title { font-size: 38px; }
