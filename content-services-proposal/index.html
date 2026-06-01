@@ -109,7 +109,7 @@
     z-index: 20;
   }
   .presentation-progress span {
-    display: block; height: 100%; width: 8.33%;
+    display: block; height: 100%; width: 5.88%;
     background: linear-gradient(90deg, var(--brand-gold), var(--brand-blue));
     transition: width 0.25s ease;
   }
@@ -261,6 +261,105 @@
   .decision-col.go h3 { color: var(--green); }
   .decision-col.nogo h3 { color: #dc2626; }
 
+  /* ── Feedback Response Slides ── */
+  .scope-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 22px 0; }
+  .scope-card {
+    border-radius: var(--radius); padding: 22px 20px;
+    border: 1px solid var(--gray-200); background: var(--white);
+    min-height: 310px;
+  }
+  .scope-card.current { border-top: 5px solid var(--gray-400); }
+  .scope-card.technical { border-top: 5px solid var(--brand-blue); }
+  .scope-card.content { border-top: 5px solid var(--brand-gold); }
+  .scope-card .eyebrow {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.8px;
+    color: var(--gray-500); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .scope-card h3 { font-size: 20px; margin: 0 0 12px; color: var(--gray-900); }
+  .scope-card li { font-size: 14px; margin-bottom: 7px; }
+  .answer-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 24px; margin: 22px 0; align-items: stretch; }
+  .answer-panel {
+    border-radius: var(--radius); padding: 24px 28px;
+    border: 1px solid var(--gray-200); background: var(--gray-50);
+  }
+  .answer-panel.dark { background: var(--brand-blue-dark); border-color: var(--brand-blue-dark); color: var(--white); }
+  .answer-panel.dark h3, .answer-panel.dark li, .answer-panel.dark p { color: rgba(255,255,255,0.88); }
+  .answer-panel li { font-size: 15px; margin-bottom: 8px; }
+  .fanout-slide { justify-content: flex-start; }
+  .fanout-slide h2 { margin-bottom: 12px; }
+  .fanout-lead { font-size: 17px; color: var(--gray-600); margin-bottom: 16px; max-width: 1120px; }
+  .fanout-map { display: grid; grid-template-columns: 0.82fr 1.38fr; gap: 22px; align-items: stretch; }
+  .fanout-origin {
+    background: linear-gradient(160deg, var(--brand-blue-dark), #1a2744);
+    border-radius: var(--radius); padding: 26px 24px; color: var(--white);
+    display: flex; flex-direction: column; justify-content: space-between; min-height: 430px;
+  }
+  .fanout-origin .eyebrow {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px;
+    color: rgba(255,255,255,0.62); font-weight: 800; margin-bottom: 12px;
+  }
+  .fanout-origin h3 { color: var(--white); margin: 0 0 14px; font-size: 30px; line-height: 1.08; }
+  .fanout-origin .quote { font-size: 18px; line-height: 1.42; color: rgba(255,255,255,0.86); margin: 0; }
+  .need-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+  .need-list span {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 8px; padding: 8px 9px; font-size: 12px; font-weight: 700;
+    color: rgba(255,255,255,0.88);
+  }
+  .fanout-clusters { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fanout-cluster {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius); padding: 16px 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .fanout-cluster-head { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+  .fanout-cluster-num {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--brand-gold-light);
+    color: var(--brand-gold-dark); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 900; flex-shrink: 0;
+  }
+  .fanout-cluster h3 { font-size: 17px; margin: 0; color: var(--brand-blue-dark); line-height: 1.2; }
+  .fanout-cluster ul { list-style: none; margin: 0; padding: 0; }
+  .fanout-cluster li {
+    position: relative; padding-left: 12px; margin-bottom: 5px;
+    font-size: 13.5px; line-height: 1.32; color: var(--gray-700);
+  }
+  .fanout-cluster li::before {
+    content: ''; position: absolute; left: 0; top: 0.62em;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--brand-blue);
+  }
+  .fanout-takeaway {
+    margin-top: 16px; background: var(--brand-blue-light); border: 1px solid #bfd6f0;
+    border-radius: var(--radius); padding: 14px 18px; color: var(--gray-700);
+  }
+  .fanout-takeaway p { margin: 0; font-size: 15px; line-height: 1.42; }
+  .proof-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 22px 0; }
+  .proof-item {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius); padding: 18px 16px;
+  }
+  .proof-item strong { display: block; font-size: 15px; color: var(--brand-blue-dark); margin-bottom: 6px; }
+  .proof-item span { display: block; font-size: 13px; color: var(--gray-600); line-height: 1.4; }
+  .source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; margin: 20px 0; }
+  .source-link {
+    display: block; border: 1px solid var(--gray-200); border-radius: var(--radius);
+    padding: 14px 16px; color: var(--brand-blue-dark); text-decoration: none;
+    background: var(--white); font-size: 15px; font-weight: 700;
+  }
+  .source-link:hover { border-color: var(--brand-blue); background: var(--brand-blue-light); }
+  .source-link span { display: block; color: var(--gray-500); font-size: 12px; font-weight: 500; margin-top: 3px; overflow-wrap: anywhere; }
+  .slide.compact h2 { margin-bottom: 18px; }
+  .slide.compact .metrics-row { margin: 14px 0; }
+  .slide.compact .metric-card { padding: 16px 14px; }
+  .slide.compact .metric-card .value { font-size: 34px; }
+  .slide.compact .metric-card .label { font-size: 12px; }
+  .slide.compact .decision-grid { margin: 14px 0; }
+  .slide.compact .decision-col { padding: 18px 22px; }
+  .slide.compact li { font-size: 15px; margin-bottom: 6px; }
+  .slide.compact .highlight-box { padding: 16px 22px; margin-top: 14px !important; }
+  .slide.compact table { font-size: 15px; }
+  .slide.compact td { padding: 8px 12px; }
+  .slide.compact .footer { margin-top: 18px; padding-top: 12px; }
+
   /* ── Footer ── */
   .footer { font-size: 13px; color: var(--gray-400); text-align: center; margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--gray-200); }
 
@@ -269,7 +368,7 @@
     html { scroll-snap-type: y proximity; }
     .slide { width: calc(100vw - 24px); height: auto; aspect-ratio: auto; padding: 36px 24px; margin: 12px auto; min-height: calc(100vh - 24px); }
     .slide.cover { padding: 56px 28px; }
-    .two-col, .two-col-wide, .metrics-row, .metrics-row.three, .pricing-row, .ai-grid, .decision-grid { grid-template-columns: 1fr; }
+    .two-col, .two-col-wide, .metrics-row, .metrics-row.three, .pricing-row, .ai-grid, .decision-grid, .scope-grid, .answer-grid, .proof-strip, .source-grid, .fanout-map, .fanout-clusters, .need-list { grid-template-columns: 1fr; }
     .timeline { flex-direction: column; gap: 16px; }
     .timeline-step::after { display: none; }
     h1 { font-size: 34px; } h2 { font-size: 28px; }
@@ -299,7 +398,7 @@
 
 <div class="presentation-progress" aria-hidden="true"><span id="presentationProgress"></span></div>
 <div class="presentation-status" aria-live="polite">
-  <span id="presentationStatus">Slide 1 of 12</span>
+  <span id="presentationStatus">Slide 1 of 17</span>
   <span class="kbd">Scroll, ↑/↓, PgUp/PgDn</span>
 </div>
 
@@ -323,7 +422,7 @@
 <div class="slide">
   <h2>Executive Summary</h2>
   <p style="font-size:17px;color:var(--gray-600);margin-bottom:24px;">
-    This proposal defines a new SEO Content Services offering designed to complement the existing Technical SEO practice. It provides leadership with the full picture needed for a clear go or no-go decision.
+    This proposal now separates the current Technical SEO scope, the future Technical SEO package, and the Content Services package needed for AI-era search.
   </p>
   <div class="metrics-row">
     <div class="metric-card"><div class="value">3</div><div class="label">Wave 1 Clients</div></div>
@@ -332,7 +431,7 @@
     <div class="metric-card"><div class="value">60h</div><div class="label">Available Capacity</div></div>
   </div>
   <div class="highlight-box">
-    <p style="margin:0;"><strong>Recommendation:</strong> Launch Wave 1 with 2-3 clients, validate the model, then scale by hiring dedicated content specialists. No new hires required until Phase 2.</p>
+    <p style="margin:0;"><strong>Recommendation:</strong> Keep Technical SEO as the foundation, add Content Services for strategic page-level content ownership, and launch Wave 1 with 2-3 clients before hiring dedicated content specialists.</p>
   </div>
   <div class="slide-num">2 / 12</div>
 </div>
@@ -373,10 +472,197 @@
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
-<!-- SLIDE 4: SERVICE SCOPE -->
+<!-- SLIDE 4: QUERY FAN-OUT -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide fanout-slide">
+  <h2>Query Fan-Out: One Purchase, Many Searches</h2>
+  <p class="fanout-lead">
+    AI search does not only match the exact words in the prompt. It breaks one purchase hesitation into related sub-queries, retrieves across those angles, then synthesizes one answer.
+  </p>
+  <div class="fanout-map">
+    <div class="fanout-origin">
+      <div>
+        <div class="eyebrow">User Hesitation</div>
+        <h3>Bulk life jackets</h3>
+        <p class="quote">"I need a reliable supplier, certified products, the right size mix, clear pricing, and fit for my use case."</p>
+      </div>
+      <div class="need-list" aria-label="Purchase concerns">
+        <span>Supplier trust</span>
+        <span>Certification</span>
+        <span>Sizing</span>
+        <span>Pricing</span>
+        <span>Shipping</span>
+        <span>Use case fit</span>
+      </div>
+    </div>
+    <div class="fanout-clusters" aria-label="Fan-out query examples">
+      <div class="fanout-cluster">
+        <div class="fanout-cluster-head"><div class="fanout-cluster-num">01</div><h3>Safety & Certification</h3></div>
+        <ul>
+          <li class="fanout-query">bulk life jackets USCG approved</li>
+          <li class="fanout-query">bulk life jackets for boating safety compliance</li>
+          <li class="fanout-query">cheap bulk life jackets with certification</li>
+          <li class="fanout-query">are wholesale life jackets US Coast Guard approved</li>
+        </ul>
+      </div>
+      <div class="fanout-cluster">
+        <div class="fanout-cluster-head"><div class="fanout-cluster-num">02</div><h3>Supplier & Pricing</h3></div>
+        <ul>
+          <li class="fanout-query">best place to buy life jackets in bulk</li>
+          <li class="fanout-query">reliable supplier for bulk life jackets</li>
+          <li class="fanout-query">bulk life jackets minimum order quantity</li>
+          <li class="fanout-query">life jackets bulk pricing for schools camps and organizations</li>
+        </ul>
+      </div>
+      <div class="fanout-cluster">
+        <div class="fanout-cluster-head"><div class="fanout-cluster-num">03</div><h3>Sizing & Group Mix</h3></div>
+        <ul>
+          <li class="fanout-query">wholesale life jackets for adults and kids</li>
+          <li class="fanout-query">wholesale life jackets size chart</li>
+          <li class="fanout-query">how many life jackets do I need for a boat or group</li>
+          <li class="fanout-query">best bulk life jackets for children adults and mixed groups</li>
+        </ul>
+      </div>
+      <div class="fanout-cluster">
+        <div class="fanout-cluster-head"><div class="fanout-cluster-num">04</div><h3>Use Case & Fulfillment</h3></div>
+        <ul>
+          <li class="fanout-query">bulk life jackets fast shipping</li>
+          <li class="fanout-query">bulk life jackets for commercial boats</li>
+          <li class="fanout-query">bulk life jackets with custom logo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fanout-takeaway">
+    <p><strong>Content implication:</strong> one ecommerce page or cluster may need to answer certification, supplier trust, sizing, use case, pricing, shipping, order quantity, and customization before AI can confidently recommend it.</p>
+  </div>
+  <div class="slide-num">4 / 17</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 5: AI SEARCH SHIFT -->
 <!-- ═══════════════════════════════════════════ -->
 <div class="slide">
-  <h2>Service Scope: What We Deliver</h2>
+  <h2>AI Search Changes the Content Requirement</h2>
+  <p style="font-size:16px;color:var(--gray-600);margin-bottom:12px;">
+    The strategic shift is from ranking one page for one query to becoming a source AI can use to answer, compare, recommend, and route the user toward action.
+  </p>
+  <div class="answer-grid">
+    <div class="answer-panel">
+      <h3 style="margin-top:0;">Traditional SEO question</h3>
+      <p style="font-size:26px;font-weight:900;color:var(--brand-blue-dark);line-height:1.25;margin:10px 0 16px;">
+        Can this page rank for this query?
+      </p>
+      <ul>
+        <li>Primary keyword and close variants</li>
+        <li>Metadata, page structure, and ranking signals</li>
+        <li>User manually compares the results</li>
+      </ul>
+    </div>
+    <div class="answer-panel dark">
+      <h3 style="margin-top:0;">AI-era SEO question</h3>
+      <p style="font-size:26px;font-weight:900;line-height:1.25;margin:10px 0 16px;color:white;">
+        Can this source help the AI satisfy intent or complete a task?
+      </p>
+      <ul>
+        <li>Query fan-out creates related sub-queries</li>
+        <li>AI evaluates comparison, trust, pricing, location, and next-step context</li>
+        <li>Some journeys are human-led; others become agent-assisted</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <p style="margin:0;"><strong>Implication:</strong> our content work must cover the full decision cluster: answer, compare, trust, decide, and act.</p>
+  </div>
+  <div class="slide-num">5 / 17</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 6: FEEDBACK RESPONSE -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide">
+  <h2>Core Question: What Changes?</h2>
+  <p style="font-size:17px;color:var(--gray-600);margin-bottom:8px;">
+    The content package complements Technical SEO. It does not rename the small content edits already included today.
+  </p>
+  <div class="scope-grid">
+    <div class="scope-card current">
+      <div class="eyebrow">Current state</div>
+      <h3>Technical SEO today</h3>
+      <ul>
+        <li>Meta titles and descriptions</li>
+        <li>Technical on-sites and HTML cleanup</li>
+        <li>Occasional H1 changes or small page updates</li>
+        <li>Limited product or headline edits when needed</li>
+      </ul>
+    </div>
+    <div class="scope-card technical">
+      <div class="eyebrow">Keep in Technical SEO</div>
+      <h3>Foundation package</h3>
+      <ul>
+        <li>Crawlability, indexation, redirects, canonicals</li>
+        <li>Site structure, schema QA, internal technical fixes</li>
+        <li>Merchant Center and product feed cleanup where relevant</li>
+        <li>Conversion blockers caused by technical friction</li>
+      </ul>
+    </div>
+    <div class="scope-card content">
+      <div class="eyebrow">Add as Content Services</div>
+      <h3>Strategic content ownership</h3>
+      <ul>
+        <li>Content clusters around transactional intent</li>
+        <li>New and refreshed page copy, FAQs, and descriptions</li>
+        <li>H2/H3 hierarchy tied to user questions and AI fan-out</li>
+        <li>Ongoing refreshes based on ranking, traffic, and conversion data</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box gold" style="margin-top:12px;">
+    <p style="margin:0;"><strong>Decision line:</strong> if the task mainly fixes site health, it stays Technical SEO. If it expands topic coverage, message, intent coverage, or conversion copy, it belongs in Content Services.</p>
+  </div>
+  <div class="slide-num">5 / 12</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 6: TRANSACTIONAL FOCUS -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide">
+  <h2>Transactional Content Is Where the Package Wins</h2>
+  <p style="font-size:17px;color:var(--gray-600);margin-bottom:8px;">
+    We should not create content for volume alone. The package should prioritize pages and clusters that help users hire, buy, book, call, reserve, compare, or request a quote.
+  </p>
+  <div class="proof-strip">
+    <div class="proof-item"><strong>Informational searches</strong><span>AI Overviews can satisfy more of the answer directly in search.</span></div>
+    <div class="proof-item"><strong>Transactional searches</strong><span>Traditional SEO surfaces still matter when a user needs to act.</span></div>
+    <div class="proof-item"><strong>Agentic search</strong><span>AI systems need clear product, service, location, trust, and availability signals.</span></div>
+    <div class="proof-item"><strong>Agency focus</strong><span>Own the keywords and content that can turn into leads or revenue.</span></div>
+  </div>
+  <div class="two-col">
+    <div class="info-card blue">
+      <h4 style="margin-top:0;">What We Build</h4>
+      <ul>
+        <li>Service, category, product, and location clusters</li>
+        <li>Comparison, pricing, trust, FAQ, and next-step sections</li>
+        <li>Clear internal links to the conversion path</li>
+      </ul>
+    </div>
+    <div class="info-card gold">
+      <h4 style="margin-top:0;">What We Avoid</h4>
+      <ul>
+        <li>Generic blog volume with weak conversion intent</li>
+        <li>Minor page edits positioned as a separate service</li>
+        <li>Content that does not support a measurable business action</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-num">6 / 12</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 7: SERVICE SCOPE -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide">
+  <h2>Service Scope: What Content Owns</h2>
   <div class="two-col">
     <div>
       <div class="info-card blue" style="margin-bottom:14px;">
@@ -394,8 +680,8 @@
     </div>
     <div>
       <div class="info-card gold" style="margin-bottom:14px;">
-        <h4 style="margin-top:0;">4. Content Briefs and Guidelines</h4>
-        <p style="font-size:13px;color:var(--gray-600);margin:0;">Detailed briefs per piece: target keyword, intent, structure, word count, internal links. AI-assisted drafting for speed. Deliverable: briefs in batches.</p>
+        <h4 style="margin-top:0;">4. Content Pieces and Guidelines</h4>
+        <p style="font-size:13px;color:var(--gray-600);margin:0;">Finished content pieces with target keyword, intent, structure, HTML hierarchy, internal links, and publishing notes. AI-assisted drafting for speed. Deliverable: content pieces in batches.</p>
       </div>
       <div class="info-card gold">
         <h4 style="margin-top:0;">5. Performance Tracking</h4>
@@ -449,7 +735,7 @@
           <tr><td>Keyword research and strategy</td><td style="text-align:right;"><span class="num">7</span></td></tr>
           <tr><td>Content audit of existing pages</td><td style="text-align:right;"><span class="num">5</span></td></tr>
           <tr><td>Content calendar (3-month)</td><td style="text-align:right;"><span class="num">4</span></td></tr>
-          <tr><td>First batch of content briefs (4-6)</td><td style="text-align:right;"><span class="num">4</span></td></tr>
+          <tr><td>First batch of content pieces (4-6)</td><td style="text-align:right;"><span class="num">4</span></td></tr>
           <tr><td>Setup and onboarding</td><td style="text-align:right;"><span class="num">2</span></td></tr>
           <tr style="font-weight:700;background:var(--brand-blue-light);"><td>Total Initial Setup</td><td style="text-align:right;"><span class="num" style="color:var(--brand-blue-dark);">22</span></td></tr>
         </tbody>
@@ -461,7 +747,7 @@
         <thead><tr><th>Activity</th><th style="text-align:right;">Hours</th></tr></thead>
         <tbody>
           <tr><td>Content calendar maintenance</td><td style="text-align:right;"><span class="num">2</span></td></tr>
-          <tr><td>New content briefs (4-6 pieces)</td><td style="text-align:right;"><span class="num">4</span></td></tr>
+          <tr><td>New content pieces (4-6)</td><td style="text-align:right;"><span class="num">4</span></td></tr>
           <tr><td>Performance review and reporting</td><td style="text-align:right;"><span class="num">3</span></td></tr>
           <tr><td>Existing content updates</td><td style="text-align:right;"><span class="num">3</span></td></tr>
           <tr><td>Client communication and meetings</td><td style="text-align:right;"><span class="num">2</span></td></tr>
@@ -488,7 +774,7 @@
       <div class="ai-save">Saves: 2-3 hours per client</div>
     </div>
     <div class="ai-item">
-      <div class="ai-label">Content Brief Generation</div>
+      <div class="ai-label">Content Piece Generation</div>
       <p style="font-size:13px;color:var(--gray-600);margin:4px 0;">Custom GPT with brand guidelines, keyword data, and SERP analysis</p>
       <div class="ai-save">Saves: 2-3 hours per client</div>
     </div>
@@ -531,7 +817,7 @@
         <li>Keyword research and strategy</li>
         <li>Content audit report</li>
         <li>3-month editorial calendar</li>
-        <li>4 content briefs per month</li>
+        <li>4 content pieces per month</li>
         <li>Monthly performance report</li>
       </ul>
     </div>
@@ -540,7 +826,7 @@
       <div class="price">$3,000<span>/month</span></div>
       <ul>
         <li>Everything in Core</li>
-        <li>8 content briefs per month</li>
+        <li>8 content pieces per month</li>
         <li>Competitor content analysis</li>
         <li>Quarterly strategy session</li>
         <li>Content refresh recommendations</li>
@@ -551,7 +837,7 @@
       <div class="price">$4,500<span>/month</span></div>
       <ul>
         <li>Everything in Growth</li>
-        <li>12 content briefs per month</li>
+        <li>12 content pieces per month</li>
         <li>Pillar page strategy</li>
         <li>HARO/PR content support</li>
         <li>Dedicated strategy calls</li>
@@ -581,7 +867,7 @@
     <div class="phase-num">2</div>
     <div class="phase-body">
       <h4>Scale (Months 4-6)</h4>
-      <p><strong>Hire 1 Junior Content Specialist</strong> (Colombia-based, ~$2,000-$2,500/month). Handles briefs, calendars, report drafts. New capacity: 100+ hours/month. Target: <strong>6-7 clients</strong>.</p>
+      <p><strong>Hire 1 Junior Content Specialist</strong> (Colombia-based, ~$2,000-$2,500/month). Handles content pieces, calendars, report drafts, and publishing coordination. New capacity: 100+ hours/month. Target: <strong>6-7 clients</strong>.</p>
     </div>
   </div>
   <div class="phase-card">
@@ -597,7 +883,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <!-- SLIDE 10: CLIENT SUCCESS -->
 <!-- ═══════════════════════════════════════════ -->
-<div class="slide">
+<div class="slide compact">
   <h2>What Client Success Looks Like</h2>
   <p style="color:var(--gray-600);margin-bottom:22px;">
     Success should be visible before revenue attribution is mature. The first signal is movement across the client's highest-priority keywords; the long-term proof is revenue growth tied back to new and improved content.
@@ -636,7 +922,7 @@
 <!-- ═══════════════════════════════════════════ -->
 <!-- SLIDE 11: DECISION + NEXT STEPS -->
 <!-- ═══════════════════════════════════════════ -->
-<div class="slide">
+<div class="slide compact">
   <h2>Go / No-Go: Decision Framework</h2>
   <div class="decision-grid">
     <div class="decision-col go">
@@ -661,8 +947,7 @@
   <div class="highlight-box gold" style="margin-top:20px;">
     <h4 style="margin-top:0;color:var(--brand-gold-dark);">Next Steps</h4>
     <table style="margin:0;">
-      <tr><td style="font-weight:700;">By May 28</td><td>Review this proposal and provide feedback</td></tr>
-      <tr><td style="font-weight:700;">By May 28</td><td>Gauge client interest: informal conversations with 2-3 clients</td></tr>
+      <tr><td style="font-weight:700;">June 1-3</td><td>Gauge client interest: informal conversations with 2-3 current Technical SEO clients</td></tr>
       <tr><td style="font-weight:700;color:var(--brand-blue);">June 4</td><td style="color:var(--brand-blue);font-weight:700;">Decision meeting: Go or No-Go</td></tr>
       <tr><td style="font-weight:700;">If GO</td><td>Begin AI pipeline setup. Target first content client: late June</td></tr>
       <tr><td style="font-weight:700;">If NO-GO</td><td>Document decision, close initiative, reassess in Q3</td></tr>
@@ -687,6 +972,30 @@
   <div class="subtitle">SEO Content Services Proposal · All In Advertising · May 2026</div>
   <div class="pill">Thank you</div>
   <div class="slide-num">12 / 12</div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- FINAL SLIDE: SOURCES -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="slide">
+  <h2>Sources</h2>
+  <p style="font-size:17px;color:var(--gray-600);margin-bottom:14px;">
+    Reference links used for the AI search, query fan-out, search intent, and AI Overview framing.
+  </p>
+  <div class="source-grid">
+    <a class="source-link" href="https://www.semrush.com/blog/query-fan-out/" target="_blank" rel="noopener">Semrush: Query Fan-Out<span>semrush.com/blog/query-fan-out/</span></a>
+    <a class="source-link" href="https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/#agentic-capabilities" target="_blank" rel="noopener">Google: AI Mode and Agentic Capabilities<span>blog.google/products-and-platforms/products/search/google-search-ai-mode-update/#agentic-capabilities</span></a>
+    <a class="source-link" href="https://ahrefs.com/blog/query-fan-out/" target="_blank" rel="noopener">Ahrefs: Query Fan-Out<span>ahrefs.com/blog/query-fan-out/</span></a>
+    <a class="source-link" href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google: Search I/O 2026<span>blog.google/products-and-platforms/products/search/search-io-2026/</span></a>
+    <a class="source-link" href="https://seranking.com/blog/search-intent/" target="_blank" rel="noopener">SE Ranking: Search Intent<span>seranking.com/blog/search-intent/</span></a>
+    <a class="source-link" href="https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/" target="_blank" rel="noopener">Google: AI Mode Update<span>blog.google/products-and-platforms/products/search/google-search-ai-mode-update/</span></a>
+    <a class="source-link" href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/" target="_blank" rel="noopener">Ahrefs: AI Overviews and Clicks<span>ahrefs.com/blog/ai-overviews-reduce-clicks-update/</span></a>
+    <a class="source-link" href="https://ahrefs.com/blog/ai-overview-triggers/" target="_blank" rel="noopener">Ahrefs: AI Overview Triggers<span>ahrefs.com/blog/ai-overview-triggers/</span></a>
+  </div>
+  <div class="footer">
+    <p>Sources listed from support-files/sources.txt · Links open in a new browser tab</p>
+  </div>
+  <div class="slide-num">17 / 17</div>
 </div>
 
 <script>
