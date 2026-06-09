@@ -2,9 +2,10 @@
 
 Static presentation project for Content Services materials.
 
-## Current Presentation
+## Available Presentations
 
 - [SEO Content Services Proposal](./content-services-proposal/)
+- [Current State and SEO Manager Role](./current-state-and-seo-manager-role/)
 
 ## Local Preview
 
@@ -27,4 +28,7 @@ After pushing to GitHub:
 3. Set **Source** to **GitHub Actions**.
 4. Push changes to the `main` branch to publish the site.
 
-The root page redirects to `content-services-proposal/`.
+The root page lists the available decks. Each deck is available at its own path:
+
+- `/content-services-proposal/`
+- `/current-state-and-seo-manager-role/`
