@@ -405,6 +405,61 @@
 
   .timeline-step:last-child::after { display: none; }
 
+  .playbook-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 14px 0;
+  }
+
+  .playbook-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  .playbook-card h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .playbook-card p {
+    margin: 0;
+    color: var(--gray-600);
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .workflow-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 12px 0 6px;
+  }
+
+  .workflow-step {
+    background: var(--brand-blue-light);
+    border: 1px solid #bfd6f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  .workflow-step h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .workflow-step p {
+    margin: 0;
+    color: var(--gray-600);
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -478,7 +533,9 @@
     .two-col,
     .three-col,
     .metrics-row,
-    .metrics-row.two { grid-template-columns: 1fr; }
+    .metrics-row.two,
+    .playbook-grid,
+    .workflow-strip { grid-template-columns: 1fr; }
     .timeline {
       flex-direction: column;
       gap: 16px;
@@ -606,32 +663,58 @@
 </div>
 
 <div class="slide">
-  <h2>How Multiple Accounts Are Managed</h2>
-  <p class="lead">The highest effort happens up front. Once strategy is in motion, execution can be distributed to the right implementation owners.</p>
-  <div class="timeline">
-    <div class="timeline-step">
-      <div class="dot"></div>
-      <div class="label">Initial Setup</div>
-      <div class="desc">Define strategy and account direction.</div>
+  <h2>SEO Strategy Playbook</h2>
+  <p class="lead">Initial setup builds the account strategy. Each month after that, the SEO Strategist pulls from a credit pool and recommends the work expected to move the needle most.</p>
+  <div class="workflow-strip">
+    <div class="workflow-step">
+      <h4>AM Gathers Context</h4>
+      <p>Collect goals, priorities, access, client constraints, recent feedback, and business context before strategy work begins.</p>
     </div>
-    <div class="timeline-step">
-      <div class="dot alt"></div>
-      <div class="label">SEO Execution</div>
-      <div class="desc">Ricky supports SEO implementation.</div>
+    <div class="workflow-step">
+      <h4>Strategist Sets Priorities</h4>
+      <p>Translate that context into the SEO tasks most likely to support the client's goals and make the best use of available credits.</p>
     </div>
-    <div class="timeline-step">
-      <div class="dot"></div>
-      <div class="label">Content Execution</div>
-      <div class="desc">Heidi supports content implementation.</div>
+    <div class="workflow-step">
+      <h4>AM Aligns the Client</h4>
+      <p>Discuss the recommended plan with the client, confirm buy-in, and bring new client direction back into the strategy loop.</p>
     </div>
-    <div class="timeline-step">
-      <div class="dot alt"></div>
-      <div class="label">Technical Execution</div>
-      <div class="desc">Developers handle technical SEO tasks.</div>
+  </div>
+  <div class="playbook-grid">
+    <div class="playbook-card">
+      <h4>Initial Setup</h4>
+      <p>Map priority pages, review current rankings, identify gaps, define commercial keyword groups, and set the first-month action plan.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Priority Products, Collections, and Commercial Pages</h4>
+      <p>Identify the highest-value Shopify collections, products, and buying guides based on revenue potential, search demand, ranking opportunity, and inventory depth.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Money Keywords</h4>
+      <p>Define transactional keywords tied to purchases and group them by collection, carat, shape, clarity, certification, price intent, and brand intent.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Current Top-Performing Keywords</h4>
+      <p>Review keywords already driving clicks, impressions, and revenue, then improve CTR, collection content, internal links, and conversion paths.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Missing Keywords</h4>
+      <p>Identify competitor keyword gaps and decide where new collection pages, buying guides, or educational content are needed.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Keywords Close to Page 1</h4>
+      <p>Focus on terms ranking in positions 10 to 16 and prioritize quick-win optimizations for pages with strong commercial value.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>CMS SEO Controls</h4>
+      <p>Decide which collections should be indexable, control duplicate URLs, and strengthen links between blogs, guides, collections, and products.</p>
+    </div>
+    <div class="playbook-card">
+      <h4>Monthly Credit Allocation</h4>
+      <p>Credits may go to different work each month. The Strategist chooses the best mix based on opportunity, urgency, and expected impact.</p>
     </div>
   </div>
   <div class="highlight-box">
-    <p style="margin:0;"><strong>Operating principle:</strong> strategy stays centralized; implementation is distributed after the setup phase.</p>
+    <p style="margin:0;"><strong>Operating principle:</strong> the monthly plan is not fixed. The SEO Strategist decides where credits create the best return based on the account's current opportunities.</p>
   </div>
   <div class="slide-num">6 / 10</div>
 </div>
